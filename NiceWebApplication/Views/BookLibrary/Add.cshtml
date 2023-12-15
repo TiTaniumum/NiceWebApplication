@@ -1,0 +1,26 @@
+﻿@model NiceWebApplication.Models.Book
+@{
+    //id, name, description, genre, author
+}
+
+<div class="formContainer">
+    <form method="post" asp-controller="BookLibrary" asp-action="Check">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+
+        <label asp-for="Description"></label>
+        <input asp-for="Description" />
+        <span asp-validation-for="Description"></span>
+
+        <label asp-for="Genre"></label>
+        <input asp-for="Genre" />
+        <span asp-validation-for="Genre"></span>
+
+        <label asp-for="Author"></label>
+        <input asp-for="Author" />
+        <span asp-validation-for="Author"></span>
+
+        <input type="submit" value="Send" />
+    </form>
+</div>

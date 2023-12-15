@@ -1,0 +1,38 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Contacts Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Contacts</h1>
+</div>
+
+<style>
+</style>
+
+<div class="formContainer">
+
+    <form method="post" asp-controller="Contacts" asp-action="Check">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+
+        <label asp-for="Surename"></label>
+        <input asp-for="Surename" />
+        <span asp-validation-for="Surename"></span>
+
+        <label asp-for="Age"></label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age"></span>
+
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+
+        <label asp-for="Message"></label>
+        <input asp-for="Message" />
+        <span asp-validation-for="Message"></span>
+
+        <input type="submit" value="Send" />
+    </form>
+</div>

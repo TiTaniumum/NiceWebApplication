@@ -1,0 +1,25 @@
+﻿@model IEnumerable<NiceWebApplication.Models.Book>
+@{
+    ViewData["Title"] = "Book library page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Book Library</h1>
+</div>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="BookLibrary" asp-action="Add">Add Book</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="book-list">
+    @foreach(var book in Model)
+    {
+        @Html.Partial("~/Views/Shared/_Book.cshtml",book);
+    }
+</div>
